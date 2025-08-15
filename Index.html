@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smoothie Machine</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <h1> The Smoothie Machine </h1>
+    <p>Build your dream smoothie in just a few clicks!</p>
+  </header>
+
+  <main>
+    <form id="smoothieForm">
+      <!-- Size -->
+      <fieldset>
+        <legend>Choose your size:</legend>
+        <label><input type="radio" name="size" value="Small" required> Small ($4.00)</label>
+        <label><input type="radio" name="size" value="Medium"> Medium ($5.50)</label>
+        <label><input type="radio" name="size" value="Large"> Large ($7.00)</label>
+      </fieldset>
+
+      <!-- Base -->
+      <label for="base">Choose your base:</label>
+      <select id="base" name="base" required>
+        <option value="">--Select--</option>
+        <option value="Milk">Milk</option>
+        <option value="Almond Milk">Almond Milk</option>
+        <option value="Yogurt">Yogurt</option>
+        <option value="Orange Juice">Orange Juice</option>
+      </select>
+
+      <!-- Fruits -->
+      <fieldset>
+        <legend>Pick your fruits ($0.75 each):</legend>
+        <label><input type="checkbox" name="fruits" value="Strawberry">  Strawberry</label>
+        <label><input type="checkbox" name="fruits" value="Banana">  Banana</label>
+        <label><input type="checkbox" name="fruits" value="Mango">  Mango</label>
+        <label><input type="checkbox" name="fruits" value="Blueberry">  Blueberry</label>
+      </fieldset>
+
+    
+      <fieldset>
+        <legend>Optional add-ons ($1.00 each):</legend>
+        <label><input type="checkbox" name="addons" value="Protein Powder">  Protein Powder</label>
+        <label><input type="checkbox" name="addons" value="Honey"> Honey</label>
+        <label><input type="checkbox" name="addons" value="Chia Seeds"> Chia Seeds</label>
+      </fieldset>
+
+   
+      <label for="notes">Special requests:</label>
+      <textarea id="notes" name="notes" placeholder="Extra ice, no sugar, etc."></textarea>
+
+   
+      <button type="submit">Order Now 🥤</button>
+    </form>
+
+  
+    <div id="orderSummary" class="hidden"></div>
+  </main>
+
+  <footer>
+    <p>We hope you come back for more</p>
+  </footer>
+
+      <!-- Js linking -->
+  <script src="script.js"></script>
+</body>
+</html>
